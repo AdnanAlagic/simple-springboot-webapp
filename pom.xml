@@ -7,21 +7,20 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>simple-springboot-webapp</name>
-    
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.3.RELEASE</version>
+        <version>3.2.1</version> <!-- Latest Spring Boot 3.x for Java 17-21 -->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
+        <java.version>21</java.version> <!-- Perfect for your Java 21 setup -->
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -31,11 +30,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
-        </dependency>
+        <!-- Removed tomcat dependency as it's included by default in web starter -->
     </dependencies>
 
     <build>
@@ -46,5 +41,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
