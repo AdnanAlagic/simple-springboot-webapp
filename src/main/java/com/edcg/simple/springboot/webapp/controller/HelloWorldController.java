@@ -22,7 +22,7 @@ public class HelloWorldController {
     
     @RequestMapping(value="/{name}",method=RequestMethod.GET)
     public String sayHi(@PathVariable String name){
-        return "Hello "+name;
+        return "Helloo "+name;
     }
     
 }
