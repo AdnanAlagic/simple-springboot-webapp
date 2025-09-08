@@ -1,3 +1,14 @@
 body{
     background-color: #D8D8D8;
 }
+
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .profile-image {
+        margin-right: 0;
+    }
+}
