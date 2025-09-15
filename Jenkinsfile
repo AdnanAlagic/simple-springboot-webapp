@@ -29,9 +29,14 @@ pipeline {
 
     post {
         always {
-            dir('app') {
-                archiveArtifacts artifacts: 'target/surefire-reports/**/*', allowEmptyArchive: true
-            }
+            archiveArtifacts artifacts: 'target/surefire-reports/**/*', allowEmptyArchive: true
+            publishTestResults testResultsPattern: 'target/surefire-reports/*.xml'
+        }
+        success {
+            echo "Tests passed on branch: ${BRANCH_NAME}"
+        }
+        failure {
+            echo "Tests failed on branch: ${BRANCH_NAME}"
         }
     }
 }
