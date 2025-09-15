@@ -30,7 +30,7 @@ pipeline {
     post {
         always {
             archiveArtifacts artifacts: 'target/surefire-reports/**/*', allowEmptyArchive: true
-            junit testResultsPattern: 'target/surefire-reports/*.xml', allowEmptyResults: true
+            junit testResults: 'target/surefire-reports/*.xml', allowEmptyResults: true
         }
         success {
             echo "Tests passed on branch: ${BRANCH_NAME}"
